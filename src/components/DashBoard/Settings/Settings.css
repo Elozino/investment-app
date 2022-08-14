@@ -1,0 +1,10 @@
+.Settings h4{
+  color: #364a63;
+  font-weight: 500;
+}
+
+.Settings > p{
+  font-size: 0.7rem;
+  margin-top: .5rem;
+  color: #3b4550;;
+}

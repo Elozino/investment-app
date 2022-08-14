@@ -1,0 +1,89 @@
+.OurPlans {
+  padding: 2rem;
+}
+
+.OurPlans header {
+  text-align: center;
+  width: 30rem;
+  margin: 0 auto;
+}
+
+.OurPlans header h3 {
+  color: #aabac3;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.OurPlans header p {
+  font-size: 0.9rem;
+  color: #405061;
+}
+
+.OurPlans header small {
+  color: #516978;
+  font-size: 0.7rem;
+}
+
+.OurPlans__cardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.OuPlans__card {
+  width: 280px;
+  height: 250px;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  border: 1px solid #aabac3;
+  /* text-align: center; */
+}
+
+.OuPlans__card h4 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.OuPlans__cardPeriod {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.OuPlans__cardPeriod small {
+  font-size: 0.5rem;
+  line-height: 0.3px;
+}
+
+hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #3d5773;
+}
+
+.OuPlans__cardPlans > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.OuPlans__cardPlans > div p {
+  font-size: 0.6rem;
+  color: #3d5773;
+}
+
+.OuPlans__cardPlans > div p:nth-of-type(1) {
+  width: 45%;
+}
+
+.OuPlans__cardPlans > div p:nth-of-type(3) {
+  width: 45%;
+  text-align: end;
+}

@@ -1,0 +1,132 @@
+.Sidebar {
+  position: relative;
+}
+
+.Sidebar__header {
+  position: absolute;
+  top: 0;
+  height: 40px;
+  /* background-color: #fff; */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+.Sidebar__content {
+  padding: 0 1.5rem;
+  position: relative;
+  top: 70px;
+}
+
+.Sidebar__account h5,
+.Sidebar__menu h5,
+.Sidebar__add h5 {
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+}
+
+.Sidebar__content .Sidebar__usd {
+  font-size: 1.3rem;
+  color: #066de2;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Sidebar__content .Sidebar__usd span {
+  font-size: 0.8rem;
+}
+
+.Sidebar__btc {
+  font-size: 0.8rem;
+  color: #55a1e4;
+}
+
+.Sidebar__profit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  margin: 20px 0;
+}
+
+.Sidebar__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Sidebar__btn button {
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+  font-weight: normal;
+}
+
+.Sidebar__btn .deposit {
+  background-color: #037dff;
+  color: #fff;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.Sidebar__btn .withdraw {
+  background-color: #f4bd0e;
+  color: #fff;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.Sidebar__menu {
+  margin-top: 40px;
+}
+
+.Sidebar__menuLink {
+  display: grid;
+  margin: 10px 0;
+}
+
+.Sidebar__link {
+  padding: 0.5rem 0.8rem;
+  border-radius: 1rem;
+}
+
+.Sidebar__link a {
+  display: flex;
+  align-items: center;
+}
+
+.Sidebar__link:hover {
+  background-color: #192839;
+}
+
+.Sidebar__link a span {
+  margin-left: 0.6rem;
+  font-size: 0.75rem;
+}
+
+.Sidebar__add .Sidebar__link {
+  font-size: 0.75rem;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 720px) {
+  .Sidebar {
+    position: relative;
+    opacity: 0;
+    animation-name: sideview;
+    animation-duration: 2s;
+  }
+  @keyframes sideview {
+    0% {
+      left: 0;
+      display: block;
+      opacity: 1;
+    }
+    100% {
+      left: -100%;
+      display: none;
+      opacity: 0;
+    }
+  }
+}

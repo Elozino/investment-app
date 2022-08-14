@@ -1,0 +1,20 @@
+.FundsCard {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 10rem;
+  background-color: #fff;
+  border-radius: 0.2rem;
+  padding: 1rem;
+  flex: 1 1 200px;
+}
+
+.FundsCard header h4 {
+  font-weight: normal;
+  color: #3d5773;
+}
+
+.FundsCard__period h5 {
+  color: #8cabce;
+  font-size: 0.65rem;
+}

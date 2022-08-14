@@ -1,0 +1,83 @@
+.Profile {
+  padding: 2rem;
+}
+
+.Profile header h2 {
+  color: #3d5773;
+  font-weight: 400;
+}
+
+.Profile header small {
+  color: #3b4550;
+  font-weight: 400;
+}
+
+.Profile__profileContent {
+  margin-bottom: 30px;
+}
+
+.Profile__profileHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 30px;
+  border-bottom: 1px solid #cecece;
+  margin-top: 10px;
+}
+
+.Profile__profileHeader p {
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  color: #3d5773;
+}
+
+.Profile__profileHeader p a{
+  color: #3d5773;
+}
+
+/* .Profile__profileHeader p .active{
+
+} */
+
+.Profile__info h4 {
+  color: #3d5773;
+  font-weight: 400;
+}
+
+.Profile small {
+  color: #3d5773;
+  font-weight: 400;
+  font-size: 0.7rem;
+}
+
+.Profile__details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.Profile__row {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #cecece;
+  color: #3d5773;
+}
+
+.Profile__row p {
+  flex: 1.5;
+}
+
+.Profile__row div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 4;
+}
+
+.Profile__row div p {
+  flex: 1;
+}

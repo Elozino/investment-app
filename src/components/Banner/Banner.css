@@ -1,0 +1,25 @@
+.Banner {
+  padding: 80px;
+  background: url(../../assets/page-header-bg.jpg) no-repeat center center;
+}
+
+.Banner__header {
+  text-align: center;
+  color: #fff;
+}
+
+.Banner__header h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.Banner__header a {
+  color: #fbbd18;
+}
+
+.Banner__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}

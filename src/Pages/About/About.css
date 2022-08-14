@@ -1,0 +1,25 @@
+.AboutPage__content {
+  padding: 20px 80px;
+}
+
+.AboutPage__content h2 {
+  margin: 20px 0;
+}
+
+.AboutPage__content p {
+  font-weight: 300;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 720px) {
+  .AboutPage__content {
+    padding: 20px 20px;
+  }
+  .AboutPage__content p {
+    font-weight: 300;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+}

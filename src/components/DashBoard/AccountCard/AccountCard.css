@@ -1,0 +1,27 @@
+.AccountCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem;
+  border-radius: 0.2rem;
+  margin-bottom: 10px;
+}
+
+.AccountCard__title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.AccountCard__title p {
+  font-size: 0.8rem;
+}
+
+.AccountCard__btn {
+  font-size: 0.7rem;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  border: none;
+  font-weight: 400;
+  border-radius: 0.2rem;
+}

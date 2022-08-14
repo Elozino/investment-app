@@ -1,0 +1,152 @@
+.Auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgb(21, 21, 48);
+  color: #cecece;
+}
+
+.Auth__Logo {
+  margin-bottom: 2rem;
+}
+
+.Auth__Wrapper a {
+  color: rgba(0, 0, 255, 0.803) !important;
+}
+
+.Auth__Wrapper {
+  background-color: #fff;
+  color: rgb(59, 50, 50);
+  padding: 2rem;
+  display: grid;
+  gap: 0.35rem;
+  margin: 1rem 0 2rem 0;
+  max-width: 500px;
+}
+
+.Auth__Wrapper h3 {
+  font-size: 1.5rem;
+}
+
+.Auth__Wrapper p {
+  font-size: 0.75rem;
+}
+
+.Auth__form {
+  display: grid;
+  gap: 1rem;
+}
+
+.Auth__form a {
+  color: rgb(59, 50, 50);
+  font-size: 0.85rem;
+}
+
+.Auth__Input {
+  padding: 0.2rem 1rem;
+  border: 1px solid #cecece;
+  border-radius: 0.2rem;
+}
+
+.Auth__form label {
+  font-size: 0.85rem;
+}
+
+.Auth__Input input {
+  background: none;
+  outline: none;
+  border: none;
+  padding: 0.2rem 0;
+}
+
+.Auth__Input input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.Auth__checkbox-wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.65rem;
+}
+
+.Auth__checkbox-wrapper p,
+.Auth__checkbox-wrapper a {
+  font-size: 0.65rem;
+}
+
+.Auth__checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.Auth__btn {
+  background-color: rgba(0, 0, 255, 0.803);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  color: #cecece;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Auth__create p {
+  text-align: center;
+  font-size: 0.65rem;
+}
+
+.Auth__create a {
+  font-size: 0.65rem;
+}
+
+.Auth__footer {
+  margin-top: 2rem;
+  display: grid;
+  place-items: center;
+  gap: 0.7rem;
+  position: absolute;
+  bottom: 0px;
+  padding: 1rem 0;
+}
+
+.Auth__footer hr {
+  border: none;
+  border-top: 1px solid #cecece;
+  width: 100vw;
+  margin: 0 auto;
+}
+
+.Auth__footer-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.Auth__footer-link ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  font-size: 0.75rem;
+}
+
+.Auth__footer-rights {
+  font-size: 0.75rem;
+}
+
+@media screen and (max-width: 720px) {
+  .Auth__Wrapper {
+    width: 90%;
+  }
+
+  .Auth__footer-wrapper {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}

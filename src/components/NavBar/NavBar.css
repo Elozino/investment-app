@@ -1,0 +1,38 @@
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: #000;
+  color: #fff;
+  padding: 0 50px;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+}
+
+.navBar__navLink ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  width: 400px;
+}
+
+@media screen and (max-width: 720px) {
+  .navBar {
+    padding: 0 2rem;
+  }
+
+  .navBar__navLink ul {
+    position: absolute;
+    right: 0px;
+    top: 60px;
+    height: calc(100vh - 60px);
+    background: rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+  }
+}

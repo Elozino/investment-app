@@ -1,0 +1,84 @@
+.TopServices {
+  padding: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  color: #fff;
+  background: url(../../assets/circleBg.png);
+  width: 100%;
+  background-position: left center;
+  background-color: #000000;
+  background-repeat: no-repeat;
+}
+
+.TopServices h3 {
+  font-size: 2rem;
+}
+
+.TopServices__hr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 8%;
+}
+
+.TopServices__hr div {
+  background-color: #fbbd18;
+  height: 5px;
+  width: 5px;
+}
+
+.TopServices__hr div:nth-child(2) {
+  width: 50px;
+}
+
+.TopServices__service {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  gap: 1.5rem;
+}
+
+.TopServices__service > div {
+  display: flex;
+  gap: 1rem;
+  border: 1px solid #bbbbbb;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.TopServices__service > div:hover {
+  border: 1px solid #fbbd18;
+  cursor: pointer;
+}
+
+.TopServices__service img {
+  width: 70px;
+  height: 70px;
+}
+
+.TopServices__service h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.TopServices__service p {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #bbbbbb;
+}
+
+@media screen and (max-width: 720px) {
+  .TopServices {
+    padding: 30px;
+  }
+
+
+  .TopServices__service {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+}

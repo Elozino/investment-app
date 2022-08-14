@@ -1,0 +1,72 @@
+.Modal__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.Modal__Wrapper {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.3rem;
+  width: 85%;
+  position: relative;
+}
+
+.Modal__Wrapper > h3 {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+.Modal__Wrapper > p {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.Modal__form {
+  display: grid;
+  gap: 1rem;
+}
+
+.Modal_formFlex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Modal_formFlex > div {
+  width: 48%;
+}
+
+.Modal__form .Modal__formField {
+  margin: 0.5rem 0 !important;
+}
+.Modal_formFlex input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.Modal__btn {
+  background-color: cadetblue;
+  color: #fff;
+  width: fit-content;
+  padding: 0.6rem 2rem;
+  font-size: 1rem;
+}

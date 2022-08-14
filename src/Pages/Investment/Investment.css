@@ -1,0 +1,98 @@
+.Investment {
+  padding: 2rem;
+}
+
+.Investment header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Investment header h5 {
+  color: #aabac3;
+  font-weight: 400;
+}
+
+.Investment header h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+  font-weight: 400;
+}
+
+.Investment header small {
+  color: #516978;
+  /* font-weight: 400; */
+}
+
+.Investment__headerBtn {
+  display: flex;
+}
+
+.Investment__headerBtn .invest {
+  background-color: #364a63;
+  margin-left: 10px;
+}
+
+.Investment__headerBtn .deposit {
+  background-color: #fff;
+  color: #000;
+}
+
+.Investment__cardContainer {
+  display: grid;
+  grid-template-columns: 350px auto;
+  grid-template-rows: 200px;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.Investment__account {
+  border-left: 3.2px solid #037dff;
+}
+
+.Investment__card {
+  background-color: #fff;
+  border-radius: 0.2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Investment__cardHeader p {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.Investment__cardInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Investment__btn button {
+  background-color: #364a63;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+}
+
+.transBtn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.transBtn button {
+  background: none;
+  color: #037dff;
+}
+
+@media screen and (max-width: 720px) {
+  .Investment__cardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+  }
+}

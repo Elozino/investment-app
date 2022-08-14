@@ -1,0 +1,16 @@
+.NavModal {
+  position: absolute;
+  right: 2rem;
+  top: 50px;
+  width: 12rem;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+hr {
+  margin: 10px 0;
+}
+
+.NavModal a {
+  color: #000;
+}
