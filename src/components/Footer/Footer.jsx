@@ -130,7 +130,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div>© {new Date.getFullYear()}BaniWaz</div>
+        <div>© {new Date().getFullYear()}BaniWaz</div>
       </section>
       <a href="http://" target="_blank" rel="noopener noreferrer"></a>
     </>
