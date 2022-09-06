@@ -7,7 +7,7 @@ import { TiThMenu } from "react-icons/ti"
 const NavBar = () => {
   let navigate = useNavigate();
   const [windowSize, setWindowSize] = useState(getWindowSize());
-  const [menu, setMenu] = useState(true)
+  const [menu, setMenu] = useState(false)
   function getWindowSize() {
     const { innerWidth, innerHeight } = window;
     return { innerWidth, innerHeight };
