@@ -3,7 +3,7 @@ import Banner from '../../components/Banner/Banner'
 import Footer from '../../components/Footer/Footer'
 import NavBar from '../../components/NavBar/NavBar'
 import Security from '../../components/SecuritySec/Security'
-import { faqs } from '../../Data/faqs'
+import { faqs } from '../../data/faqs'
 import "./FAQs.css"
 
 const FAQs = () => {

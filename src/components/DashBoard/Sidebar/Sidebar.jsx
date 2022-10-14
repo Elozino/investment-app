@@ -2,17 +2,17 @@ import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import "./Sidebar.css"
 import { RiDashboardLine, RiUserSettingsLine } from "react-icons/ri"
-import { sidebar } from '../../../Data/sidebar'
+import { sidebar } from '../../../data/sidebar'
 import { StateContext } from '../../../context/context'
 
-const Sidebar = () => {
+const Sidebar = ({ mobileSidebar }) => {
   const [activeIndex, setActiveIndex] = useState(0)
   const { btc, usd } = useContext(StateContext)
 
   // console.log(btc)
 
   return (
-    <div className='Sidebar'>
+    <div className={mobileSidebar ? 'Sidebar Sidebar__show' : 'Sidebar Sidebar__hide'}>
       <div className='Sidebar__header'>
         BANIWAZ
       </div>
@@ -89,7 +89,7 @@ const Sidebar = () => {
           </div>
         </section>
       </div>
-    </div>
+    </div >
   )
 }
 

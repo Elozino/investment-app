@@ -1,6 +1,6 @@
 import React from 'react'
 import "./OurPlans.css"
-import { plan } from '../../Data/plans'
+import { plan } from '../../data/plans'
 
 
 const OurPlans = () => {

@@ -2,23 +2,23 @@ import React from 'react'
 import "./NavModal.css"
 import { Link } from "react-router-dom"
 
-function NavModal() {
+function NavModal({ setNavModal }) {
   return (
-    <div className="NavModal">
+    <div className="NavModal" onClick={() => setNavModal(prev => !prev)}>
       <div>
-        <Link to="">Dashboard</Link>
+        <Link to="/dashboard">Dashboard</Link>
       </div>
       <div>
-        <Link to="">Transaction</Link>
+        <Link to="/dashboard/transaction">Transaction</Link>
       </div>
       <div>
-        <Link to="">Investment</Link>
+        <Link to="/dashboard/investment">Investment</Link>
       </div>
       <div>
-        <Link to="">Our Plans</Link>
+        <Link to="/dashboard/ourplans">Our Plans</Link>
       </div>
       <div>
-        <Link to="">Profile</Link>
+        <Link to="/dashboard/profile">Profile</Link>
       </div>
       <hr />
       <div>LogOut</div>

@@ -5,7 +5,7 @@ import { auth, db } from "../firebase/firebaseConfig";
 export const StateContext = createContext("");
 
 const Provider = ({ children }) => {
-  const [userName, setuserName] = useState("");
+  const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("")
   const [usd, setUsd] = useState(0.00);
   const [btc, setBtc] = useState(0.00);
@@ -15,7 +15,7 @@ const Provider = ({ children }) => {
     <StateContext.Provider
       value={{
         userName,
-        setuserName,
+        setUserName,
         email,
         setEmail,
         usd,

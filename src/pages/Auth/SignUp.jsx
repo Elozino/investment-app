@@ -110,7 +110,7 @@ const SignUp = () => {
                 })
                 }
               />
-              <p>&nbsp; I have agree to the {" "} <Link to="">Terms & Condition</Link> </p>
+              <p>&nbsp; I have agree to the {" "} <Link to="/terms">Terms & Condition</Link> </p>
             </div>
           </div>
           <button
@@ -130,10 +130,10 @@ const SignUp = () => {
           <div className='Auth__footer-link'>
             <ul>
               <li>
-                <Link to="">FAQs</Link>
+                <Link to="/faqs">FAQs</Link>
               </li>
               <li>
-                <Link to="">Terms and Condition</Link>
+                <Link to="/terms">Terms and Condition</Link>
               </li>
               <li>
                 <Link to="">Privacy Policy</Link>

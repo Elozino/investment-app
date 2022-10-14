@@ -1,4 +1,4 @@
-.DashboarLayout {
+.DashboardLayout {
   display: grid;
   grid-template-columns: 17rem 4fr;
   height: 100vh;
@@ -6,17 +6,17 @@
   background-color: #f5f6fa;
 }
 
-.DashboarLayout__Siderbar {
+.DashboardLayout__Sidebar {
   background-color: rgb(16, 25, 36);
   color: rgb(88, 124, 157);
 }
 
-.DashboarLayout__Main {
+.DashboardLayout__Main {
   overflow: auto;
   position: relative;
 }
 
-.DashboarLayout__nav {
+.DashboardLayout__nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -25,11 +25,11 @@
   background-color: #fff;
 }
 
-.DashboarLayout__mobileNav{
+.DashboardLayout__mobileNav {
   display: none;
 }
 
-.DashboarLayout__profileNav{
+.DashboardLayout__profileNav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,6 +44,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .DashboardLayout__person p {
@@ -87,42 +88,34 @@
 }
 
 @media screen and (max-width: 720px) {
-  .DashboarLayout {
+  .DashboardLayout {
     display: grid;
     grid-template-columns: 0rem 4fr;
     height: 100vh;
     overflow: hidden;
     background-color: #f5f6fa;
-    animation-name: sidemenu;
-    animation-duration: 2s;
   }
 
-  .DashboarLayout__Siderbar {
+  .DashboardLayout__Sidebar {
     position: relative;
+    grid-template-columns: 0rem 4fr;
     left: -100%;
-    animation-name: sidemenu;
-    animation-duration: 2s;
-  }
-  @keyframes sidemenu {
-    0% {
-      left: 0;
-      grid-template-columns: 17rem 4fr;
-    }
-    100% {
-      left: -100%;
-      grid-template-columns: 0rem 4fr;
-    }
   }
 
-  .DashboarLayout__nav {
+  .DashboardLayout__nav {
     justify-content: space-between;
   }
-  
-  .DashboarLayout__mobileNav{
+
+  .DashboardLayout__mobileNav {
     display: block;
+    cursor: pointer;
   }
 
-  .DashboardLayout__footer {
+  .DashboardLayout__Siderbar__hidden {
+    display: none;
+  }
+
+  .DashboarddLayout__footer {
     background-color: #fff;
     display: flex;
     flex-direction: column;

@@ -1,12 +1,12 @@
 .Sidebar {
   position: relative;
+  /* z-index: 1; */
 }
 
 .Sidebar__header {
   position: absolute;
   top: 0;
   height: 40px;
-  /* background-color: #fff; */
   display: flex;
   align-items: center;
   width: 100%;
@@ -113,10 +113,34 @@
 @media screen and (max-width: 720px) {
   .Sidebar {
     position: relative;
-    opacity: 0;
+    display: none;
     animation-name: sideview;
     animation-duration: 2s;
+    z-index: 1;
   }
+
+  .Sidebar__show {
+    display: block;
+  }
+
+  .Sidebar__hide {
+    display: none;
+  }
+
+  .Sidebar__header {
+    display: none;
+  }
+
+  .Sidebar__content {
+    background-color: #fff;
+    top: 50px;
+    height: 100vh;
+    width: max-content;
+    background-color: rgb(16, 25, 36);
+    padding-top: 20px;
+  }
+
+  /* 
   @keyframes sideview {
     0% {
       left: 0;
@@ -128,5 +152,5 @@
       display: none;
       opacity: 0;
     }
-  }
+  } */
 }

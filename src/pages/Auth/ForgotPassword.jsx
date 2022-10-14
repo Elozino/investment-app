@@ -21,7 +21,6 @@ function ForgotPassword() {
       <div className='Auth__Logo'>BANIWAZ</div>
       <div
         className='Auth__Wrapper'
-        style={{ width: "500px" }}
       >
         <h3>Forgot Password</h3>
         <p>Enter your email address</p>

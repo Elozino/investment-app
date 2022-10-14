@@ -7,7 +7,7 @@ import { TiThMenu } from "react-icons/ti"
 const NavBar = () => {
   let navigate = useNavigate();
   const [windowSize, setWindowSize] = useState(getWindowSize());
-  const [menu, setMenu] = useState(false)
+  const [menu, setMenu] = useState(true)
   function getWindowSize() {
     const { innerWidth, innerHeight } = window;
     return { innerWidth, innerHeight };
@@ -32,7 +32,9 @@ const NavBar = () => {
 
   return (
     <nav className='navBar'>
-      <div className='navBar__logo'>BANIWAZ</div>
+      <div className='navBar__logo'>
+        <Link to="/">BANIWAZ</Link>
+      </div>
       <div className='navBar__navLink'
         style={{ display: menu && "none" }}
       >

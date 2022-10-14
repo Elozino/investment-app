@@ -4,28 +4,28 @@ import { RiDashboardLine, RiUserSettingsLine } from "react-icons/ri";
 
 export const sidebar = [
   {
-    icon: RiDashboardLine,
+    icon: "",
     linkName: "Dashboard",
-    url: "/dashboard"
+    url: "/dashboard",
   },
   {
-    icon: MdOutlineSwapHorizontalCircle,
+    icon: "",
     linkName: "Transaction",
-    url: "/dashboard/transaction"
+    url: "/dashboard/transaction",
   },
   {
-    icon: AiOutlineTransaction,
+    icon: "",
     linkName: "Investment",
-    url: "/dashboard/investment"
+    url: "/dashboard/investment",
   },
   {
-    icon: AiOutlineTransaction,
+    icon: "",
     linkName: "Our Plans",
-    url: "ourplans"
+    url: "ourplans",
   },
   {
-    icon: RiUserSettingsLine,
+    icon: "",
     linkName: "My Profile",
-    url: "/dashboard/profile"
-  }
-]
+    url: "/dashboard/profile",
+  },
+];

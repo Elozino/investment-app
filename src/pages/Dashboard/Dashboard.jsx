@@ -6,6 +6,7 @@ import { IoIosAlert } from 'react-icons/io'
 import { BsArrowRight } from 'react-icons/bs'
 import FundsCard from '../../components/DashBoard/FundsCard/FundsCard'
 import { StateContext } from '../../context/context'
+import { Link } from 'react-router-dom'
 
 
 
@@ -24,9 +25,11 @@ const Dashboard = () => {
           <button className='invest'>Invest & Earn
             <BsArrowRight size={18} style={{ marginLeft: "10px" }} />
           </button>
-          <button className='deposit'>Deposit
-            <BsArrowRight size={18} style={{ marginLeft: "10px" }} />
-          </button>
+          <Link to="/dashboard/deposit">
+            <button className='deposit'>Deposit
+              <BsArrowRight size={18} style={{ marginLeft: "10px" }} />
+            </button>
+          </Link>
         </div>
       </header>
       <section>

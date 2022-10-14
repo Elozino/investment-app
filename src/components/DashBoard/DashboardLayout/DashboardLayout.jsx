@@ -4,23 +4,24 @@ import "./DashboardLayout.css"
 import { BsFillPersonFill, BsMenuButton } from 'react-icons/bs'
 import { IoIosArrowDown } from 'react-icons/io'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import Dashboard from '../../../Pages/Dashboard/Dashboard'
-import Transaction from '../../../Pages/Transaction/Transaction'
-import Investment from '../../../Pages/Investment/Investment'
-import OurPlans from '../../../Pages/Plans/OurPlans'
-import Profile from '../../../Pages/Profile/Profile'
+import Dashboard from '../../../pages/Dashboard/Dashboard'
+import Transaction from '../../../pages/Transaction/Transaction'
+import Investment from '../../../pages/Investment/Investment'
+import OurPlans from '../../../pages/Plans/OurPlans'
+import Profile from '../../../pages/Profile/Profile'
 import { auth, db } from '../../../firebase/firebaseConfig'
 import { signOut } from 'firebase/auth'
 import { StateContext } from '../../../context/context'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import NavModal from "../../NavBar/NavModal"
-import Deposit from '../../../Pages/Funds/Deposit'
-import Withdraw from '../../../Pages/Funds/Withdraw'
+import Deposit from '../../../pages/Funds/Deposit'
+import Withdraw from '../../../pages/Funds/Withdraw'
 import { MdMenu } from 'react-icons/md'
 
 const DashboardLayout = () => {
   const [navModal, setNavModal] = useState(false)
-  const { userName, setuserName, setEmail, setUsd, setBtc } = useContext(StateContext)
+  const [mobileSidebar, setMobileSidebar] = useState(true)
+  const { userName, setUserName, setEmail, setUsd, setBtc } = useContext(StateContext)
   const { pathname } = useLocation()
   const navigate = useNavigate()
 
@@ -34,7 +35,7 @@ const DashboardLayout = () => {
     // doc.data() is never undefined for query doc
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
-      setuserName(doc.data().fullname);
+      setUserName(doc.data().fullname);
       setEmail(doc.data().email);
       setUsd(doc.data().usdAmount);
       setBtc(doc.data().btcAmount);
@@ -69,16 +70,16 @@ const DashboardLayout = () => {
   };
 
   return (
-    <div className='DashboarLayout'>
-      <div className='DashboarLayout__Siderbar'>
-        <Sidebar />
+    <div className='DashboardLayout'>
+      <div className='DashboardLayout__Sidebar'>
+        <Sidebar mobileSidebar={mobileSidebar} />
       </div>
-      <div className='DashboarLayout__Main'>
-        <div className='DashboarLayout__nav'>
-          <div className='DashboarLayout__mobileNav'>
+      <div className='DashboardLayout__Main'>
+        <div className='DashboardLayout__nav'>
+          <div className='DashboardLayout__mobileNav' onClick={() => setMobileSidebar(prev => !prev)}>
             <MdMenu size={24} />
           </div>
-          <div className='DashboarLayout__profileNav'>
+          <div className='DashboardLayout__profileNav'>
             <div className="DashboardLayout__image">
               <BsFillPersonFill color="#cecece" />
             </div>
@@ -89,7 +90,7 @@ const DashboardLayout = () => {
                 style={{ display: "flex", alignItems: "center" }}>{userName} &nbsp;<IoIosArrowDown /></p>
             </div>
           </div>
-          {navModal && <NavModal />}
+          {navModal && <NavModal setNavModal={setNavModal} />}
         </div>
         <>
           {renderScreen()}
