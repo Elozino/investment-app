@@ -87,3 +87,10 @@ hr {
   width: 45%;
   text-align: end;
 }
+
+
+@media screen and (max-width: 720px) {
+  .OurPlans header {
+    width: auto;
+  }
+}

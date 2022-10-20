@@ -12,7 +12,8 @@ const AccountCard = ({ title, BtnTitle, icon, color, bg, func }) => {
       <div>
         <button
           onClick={func}
-          className='AccountCard__btn' style={{ color: color, background: bg }}>{BtnTitle}</button>
+          className='AccountCard__btn' style={{ color: color, background: bg }}>{BtnTitle}
+        </button>
       </div>
     </div>
   )

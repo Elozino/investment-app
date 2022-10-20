@@ -24,6 +24,9 @@
   padding: 0.7rem 2.5rem;
   gap: 0.5rem;
   background-color: #fff;
+  position: sticky;
+  width: 100%;
+  top: 0;
 }
 
 .DashboardLayout__mobileNav {
@@ -61,6 +64,10 @@
   color: green;
 }
 
+.Dashboard__Render {
+  margin: 0px 0 40px 0;
+}
+
 .DashboardLayout__footer {
   background-color: #fff;
   display: flex;
@@ -68,7 +75,9 @@
   justify-content: space-between;
   padding: 0.6rem 2.5rem;
   height: 40px;
-  width: 100%;
+  width: calc(100% - 17rem);
+  position: fixed;
+  bottom: 0;
 }
 
 .DashboardLayout__footer ul {
@@ -116,16 +125,13 @@
     display: none;
   }
 
-  .DashboarddLayout__footer {
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.6rem 2.5rem;
-    height: 60px;
+  .Dashboard__Render {
+    margin: 0px 0 0px 0;
+  }
+
+  .DashboardLayout__footer {
     position: sticky;
+    width: calc(100% - 0rem);
     bottom: 0;
-    width: 100%;
   }
 }

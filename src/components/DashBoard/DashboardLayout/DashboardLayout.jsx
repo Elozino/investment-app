@@ -90,9 +90,9 @@ const DashboardLayout = () => {
         </div>
 
         {/* dashboard section */}
-        <>
+        <div className='Dashboard__Render'>
           {renderScreen()}
-        </>
+        </div>
 
         {/* footer section */}
         <div className='DashboardLayout__footer'>

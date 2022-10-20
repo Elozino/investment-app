@@ -1,5 +1,6 @@
 .Transaction {
   padding: 2rem;
+  min-height: 87vh;
 }
 
 .Transaction header {

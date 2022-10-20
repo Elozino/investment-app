@@ -1,5 +1,6 @@
 .Investment {
   padding: 2rem;
+  min-height: 87vh;
 }
 
 .Investment header {

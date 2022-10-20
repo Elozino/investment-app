@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import AccountCard from '../../components/DashBoard/AccountCard/AccountCard'
 import "./Dashboard.css"
 import { TiWarning } from "react-icons/ti"
@@ -7,11 +7,13 @@ import { BsArrowRight } from 'react-icons/bs'
 import FundsCard from '../../components/DashBoard/FundsCard/FundsCard'
 import { StateContext } from '../../context/context'
 import { Link } from 'react-router-dom'
+import Modal from '../../components/DashBoard/ProfileSettings/Modal'
 
 
 
 const Dashboard = () => {
   const { userName, usd } = useContext(StateContext)
+  const [modal, setModal] = useState(false)
   return (
     <div className='Dashboard'>
       <header>
@@ -45,6 +47,7 @@ const Dashboard = () => {
           color="#037DFF"
           title="Update your account information from your profile to complete account setup."
           BtnTitle="Update Profile"
+          func={() => setModal(true)}
         />
       </section>
       <section className='Dashboard__fundscard'>
@@ -65,6 +68,7 @@ const Dashboard = () => {
           bg="#F4BD0E"
         />
       </section>
+      {modal && <Modal setModal={setModal} />}
     </div>
   )
 }
