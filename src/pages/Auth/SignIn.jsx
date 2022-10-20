@@ -14,7 +14,7 @@ const SignIn = () => {
     password: "",
     remember: false
   })
-  const { setEmail } = useContext(StateContext)
+  const { setEmail, setUserId } = useContext(StateContext)
 
   const changeHandle = e => {
     setFormData({
@@ -29,7 +29,8 @@ const SignIn = () => {
     try {
       await signInWithEmailAndPassword(auth, formData.email, formData.password)
         .then(res => {
-          setEmail(formData?.email)
+          setEmail(res.user.email)
+          setUserId(res.user.uid)
           console.log(res.user)
         })
       navigate("/dashboard")

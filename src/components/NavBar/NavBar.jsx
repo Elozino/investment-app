@@ -1,13 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Button from '../Button/Button'
 import "./NavBar.css"
 import { TiThMenu } from "react-icons/ti"
+import { StateContext } from '../../context/context'
 
 const NavBar = () => {
   let navigate = useNavigate();
   const [windowSize, setWindowSize] = useState(getWindowSize());
   const [menu, setMenu] = useState(true)
+  const { userId } = useContext(StateContext)
+
+
   function getWindowSize() {
     const { innerWidth, innerHeight } = window;
     return { innerWidth, innerHeight };
@@ -15,7 +19,11 @@ const NavBar = () => {
 
   const handleAuth = (e) => {
     e.preventDefault()
-    navigate("/signin")
+    if (userId == null) {
+      navigate("/signup")
+    } else {
+      navigate("/signin")
+    }
   }
 
   useEffect(() => {
@@ -69,7 +77,7 @@ const NavBar = () => {
       }
       {windowSize.innerWidth > "720" &&
         <div onClick={handleAuth}>
-          <Button title="SIGN IN" color="white" />
+          <Button title={userId == null ? "SIGN UP" : "SIGN IN"} color="white" />
         </div>
       }
     </nav>

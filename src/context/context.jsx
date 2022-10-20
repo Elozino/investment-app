@@ -5,8 +5,8 @@ export const StateContext = createContext("");
 
 const Provider = ({ children }) => {
   const [userName, setUserName] = useState("False name");
-  const [userId, setUserId] = useState("")
-  const [email, setEmail] = useState("")
+  const [userId, setUserId] = useState(null)
+  const [email, setEmail] = useState(null)
   const [usd, setUsd] = useState(0.00);
   const [btc, setBtc] = useState(0.00);
 
@@ -14,7 +14,7 @@ const Provider = ({ children }) => {
   useEffect(() => {
     // console.log(userId)
     // console.log(userName)
-    // console.log(email);
+    console.log(email);
   }, [userName, userId, email])
 
 
