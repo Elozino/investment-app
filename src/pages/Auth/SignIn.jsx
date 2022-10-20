@@ -1,6 +1,7 @@
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { StateContext } from '../../context/context';
 import { auth } from '../../firebase/firebaseConfig';
 import './Auth.css'
 
@@ -13,6 +14,7 @@ const SignIn = () => {
     password: "",
     remember: false
   })
+  const { setEmail } = useContext(StateContext)
 
   const changeHandle = e => {
     setFormData({
@@ -26,7 +28,10 @@ const SignIn = () => {
     e.preventDefault()
     try {
       await signInWithEmailAndPassword(auth, formData.email, formData.password)
-        .then(res => console.log(res.user))
+        .then(res => {
+          setEmail(formData?.email)
+          console.log(res.user)
+        })
       navigate("/dashboard")
     } catch (err) {
       console.error(err);

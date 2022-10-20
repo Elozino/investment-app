@@ -1,6 +1,7 @@
 import React from 'react'
 import "./NavModal.css"
 import { Link } from "react-router-dom"
+import { authLogout } from '../../firebase/auth'
 
 function NavModal({ setNavModal }) {
   return (
@@ -21,7 +22,9 @@ function NavModal({ setNavModal }) {
         <Link to="/dashboard/profile">Profile</Link>
       </div>
       <hr />
-      <div>LogOut</div>
+      <div onClick={authLogout}>
+        <Link to="/signin">Logout</Link>
+      </div>
     </div>
   )
 }

@@ -4,6 +4,7 @@
   height: 100vh;
   overflow: hidden;
   background-color: #f5f6fa;
+  position: relative;
 }
 
 .DashboardLayout__Sidebar {

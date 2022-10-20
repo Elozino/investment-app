@@ -9,8 +9,6 @@ const Sidebar = ({ mobileSidebar }) => {
   const [activeIndex, setActiveIndex] = useState(0)
   const { btc, usd } = useContext(StateContext)
 
-  // console.log(btc)
-
   return (
     <div className={mobileSidebar ? 'Sidebar Sidebar__show' : 'Sidebar Sidebar__hide'}>
       <div className='Sidebar__header'>
@@ -23,7 +21,7 @@ const Sidebar = ({ mobileSidebar }) => {
           <p className="Sidebar__btc">{btc} BTC</p>
           <div className='Sidebar__profit'>
             <p>Profits (7d)</p>
-            <p>{usd} ?? USD</p>
+            <p>{usd} USD</p>
           </div>
           <div className="Sidebar__btn">
             <button className='deposit'>

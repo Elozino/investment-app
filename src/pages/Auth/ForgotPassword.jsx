@@ -8,13 +8,11 @@ function ForgotPassword() {
   const [email, setEmail] = useState("")
 
   const sendPasswordReset = async (email) => {
-    try {
-      await sendPasswordResetEmail(auth, email);
-      alert("Password reset link sent!");
-    } catch (err) {
-      console.error(err);
-      alert(err.message);
-    }
+    return sendPasswordResetEmail(auth, email)
+      .then((a) => {
+        alert("Password reset email sent")
+      })
+      .catch(err => console.log(err))
   };
   return (
     <div className='Auth'>
@@ -39,7 +37,8 @@ function ForgotPassword() {
             </div>
           </div>
           <button
-            onClick={sendPasswordReset}
+            type="button"
+            onClick={() => sendPasswordReset(email)}
             className='Auth__btn'>
             Submit
           </button>

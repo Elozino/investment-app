@@ -9,42 +9,20 @@ import Transaction from '../../../pages/Transaction/Transaction'
 import Investment from '../../../pages/Investment/Investment'
 import OurPlans from '../../../pages/Plans/OurPlans'
 import Profile from '../../../pages/Profile/Profile'
-import { auth, db } from '../../../firebase/firebaseConfig'
-import { signOut } from 'firebase/auth'
 import { StateContext } from '../../../context/context'
-import { collection, getDocs, query, where } from 'firebase/firestore'
 import NavModal from "../../NavBar/NavModal"
 import Deposit from '../../../pages/Funds/Deposit'
 import Withdraw from '../../../pages/Funds/Withdraw'
 import { MdMenu } from 'react-icons/md'
+import { client } from '../../../features/sanityClient'
 
 const DashboardLayout = () => {
   const [navModal, setNavModal] = useState(false)
   const [mobileSidebar, setMobileSidebar] = useState(true)
-  const { userName, setUserName, setEmail, setUsd, setBtc } = useContext(StateContext)
   const { pathname } = useLocation()
   const navigate = useNavigate()
 
-  const getUser = async () => {
-    const currentUserId = auth?.currentUser?.uid;
-    console.log(currentUserId);
-    const q = query(
-      collection(db, "users"),
-      where("uid", "==", currentUserId)
-    );
-    // doc.data() is never undefined for query doc
-    const querySnapshot = await getDocs(q);
-    querySnapshot.forEach((doc) => {
-      setUserName(doc.data().fullname);
-      setEmail(doc.data().email);
-      setUsd(doc.data().usdAmount);
-      setBtc(doc.data().btcAmount);
-    });
-  };
-
-  useEffect(() => {
-    getUser()
-  }, [])
+  const { email, userName, setUserName, setBtc, setUsd } = useContext(StateContext)
 
   const renderScreen = () => {
     if (pathname === "/dashboard") {
@@ -61,13 +39,31 @@ const DashboardLayout = () => {
       return <Deposit />
     } else if (pathname === "/dashboard/withdraw") {
       return <Withdraw />
+    } else {
+      // pathname = navigate.goBack()
     }
   }
 
-  const logout = async () => {
-    await signOut(auth);
-    navigate("/signin")
-  };
+  const fetchUser = async () => {
+    await client.fetch(
+      `*[_type == "user" && user_email == "${email}"]`
+    )
+      .then((result) => {
+        const { user_full_name, user_email, user_btc, user_usd } = result[0]
+        setUserName(user_full_name)
+        setBtc(user_btc)
+        setUsd(user_usd)
+        console.log(result[0])
+      })
+      .catch((error) => console.log({ error }));
+    return
+  }
+
+  useEffect(() => {
+    console.log({ email })
+    fetchUser()
+  }, [])
+
 
   return (
     <div className='DashboardLayout'>
@@ -87,14 +83,18 @@ const DashboardLayout = () => {
               <p className='verified'>Verified</p>
               <p
                 onClick={() => setNavModal(!navModal)}
-                style={{ display: "flex", alignItems: "center" }}>{userName} &nbsp;<IoIosArrowDown /></p>
+                style={{ display: "flex", alignItems: "center" }}>{userName?.split(" ")[0]} &nbsp;<IoIosArrowDown /></p>
             </div>
           </div>
           {navModal && <NavModal setNavModal={setNavModal} />}
         </div>
+
+        {/* dashboard section */}
         <>
           {renderScreen()}
         </>
+
+        {/* footer section */}
         <div className='DashboardLayout__footer'>
           <div className='DashboardLayout__footer-link'>
             <ul>

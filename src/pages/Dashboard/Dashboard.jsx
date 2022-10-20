@@ -12,7 +12,6 @@ import { Link } from 'react-router-dom'
 
 const Dashboard = () => {
   const { userName, usd } = useContext(StateContext)
-  console.log(userName)
   return (
     <div className='Dashboard'>
       <header>

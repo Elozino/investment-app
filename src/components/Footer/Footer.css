@@ -20,8 +20,6 @@
   margin-top: 10px;
   display: flex;
   align-items: center;
-  /* justify-content: space-between;
-  width: 25%; */
 }
 
 .Footer__line1 {
@@ -120,6 +118,6 @@
   .Footer__footer {
     flex-direction: column;
     padding: 10px 30px;
-    gap: .5rem;
+    gap: 0.5rem;
   }
 }

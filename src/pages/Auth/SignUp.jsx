@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
 import { auth, db } from '../../firebase/firebaseConfig';
 import { useAuthState } from "react-firebase-hooks/auth";
 import { addDoc, collection } from 'firebase/firestore';
+import { StateContext } from '../../context/context';
+import { client } from '../../features/sanityClient';
 
 const SignUp = () => {
   let navigate = useNavigate();
@@ -14,6 +16,8 @@ const SignUp = () => {
     password: "",
     terms: false,
   })
+
+  const { userId, setUserId, setUserName, setEmail } = useContext(StateContext)
 
   const changeHandle = e => {
     setFormData({
@@ -27,19 +31,23 @@ const SignUp = () => {
   //   if (user) navigate("/dashboard");
   // }, [user, loading]);
 
-  const handleSignup = async (e) => {
+  const handleSignUp = async (e) => {
     e.preventDefault()
     try {
       const res = await createUserWithEmailAndPassword(auth, formData.email, formData.password)
-      const user = res.user;
-      console.log(user);
-      await addDoc(collection(db, "users"), {
-        uid: user.uid,
-        ...formData,
-        usdAmount: 0.00,
-        btcAmount: 0.00,
-        authProvider: "local",
-      });
+      await setUserId(() => res.user.uid)
+      await setUserName(formData?.fullname)
+      await setEmail(formData?.email)
+      await client.create({
+        _type: "user",
+        user_id: res.user.uid,
+        user_full_name: formData?.fullname,
+        user_email: formData?.email,
+        user_btc: 0,
+        user_usd: 0
+      })
+      // const user = res.user;
+      // console.log(user);
       navigate("/dashboard")
     } catch (err) {
       console.error(err);
@@ -64,7 +72,7 @@ const SignUp = () => {
                 placeholder='Enter your Full Name'
                 id="fullname"
                 name='fullname'
-                value={formData.name}
+                value={formData.fullname}
                 onChange={changeHandle}
                 required
               />
@@ -114,7 +122,7 @@ const SignUp = () => {
             </div>
           </div>
           <button
-            onClick={handleSignup}
+            onClick={handleSignUp}
             className='Auth__btn'>Sign Up</button>
           <div className='Auth__create'>
             <p>
