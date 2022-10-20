@@ -131,7 +131,9 @@
 
   .DashboardLayout__footer {
     position: sticky;
-    width: calc(100% - 0rem);
-    bottom: 0;
+    width: 100%;
+    bottom: 0px;
+    height: 60px;
+    flex-direction: column;
   }
 }

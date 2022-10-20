@@ -18,7 +18,7 @@ import { client } from '../../../features/sanityClient'
 
 const DashboardLayout = () => {
   const [navModal, setNavModal] = useState(false)
-  const [mobileSidebar, setMobileSidebar] = useState(true)
+  const [mobileSidebar, setMobileSidebar] = useState(false)
   const { pathname } = useLocation()
   const navigate = useNavigate()
 

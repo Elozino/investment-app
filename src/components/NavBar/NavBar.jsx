@@ -63,7 +63,7 @@ const NavBar = () => {
           {windowSize.innerWidth <= "720" &&
             <li>
               <div onClick={handleAuth}>
-                <Button title="SIGN IN" color="white" />
+                <Button title={userId == null ? "SIGN UP" : "SIGN IN"} color="white" />
               </div>
             </li>
           }
