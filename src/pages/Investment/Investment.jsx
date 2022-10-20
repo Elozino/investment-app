@@ -16,9 +16,11 @@ const Investment = () => {
           <small>At a glance summary of your investment.</small>
         </div>
         <div className='Investment__headerBtn'>
-          <Link to='/dashboard/deposit' className='deposit'>Deposit Funds
-            <BsArrowRight size={16} style={{ marginLeft: "10px" }} />
-          </Link>
+          <button>
+            <Link to='/dashboard/deposit' className='deposit'>Deposit Funds
+              <BsArrowRight size={16} style={{ marginLeft: "10px" }} />
+            </Link>
+          </button>
           <button className='invest'>Invest & Earn
             <BsArrowRight size={16} style={{ marginLeft: "10px" }} />
           </button>
