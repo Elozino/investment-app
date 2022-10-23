@@ -21,7 +21,6 @@ const Home = () => {
       <About />
       <TopServices />
       <Solution />
-      {/* <TermPlans /> */}
       <ShortPlan />
       <FixedPlan />
       <LongPlan />

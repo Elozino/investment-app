@@ -38,7 +38,7 @@
   width: 100%;
 }
 
-.TermPlans__plans .container {
+.TermPlans__plans .TermsPlan_container {
   border: 1px solid #000000;
   border-radius: 8px;
   flex: 1;

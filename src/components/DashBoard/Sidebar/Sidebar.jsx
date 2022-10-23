@@ -12,7 +12,7 @@ const Sidebar = ({ mobileSidebar }) => {
   return (
     <div className={mobileSidebar ? 'Sidebar Sidebar__show' : 'Sidebar Sidebar__hide'}>
       <div className='Sidebar__header'>
-        BANIWAZ
+        Trust Crypto Investment
       </div>
       <div className="Sidebar__content">
         <section className='Sidebar__account'>

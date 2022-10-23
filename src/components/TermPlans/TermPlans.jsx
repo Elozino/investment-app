@@ -1,6 +1,4 @@
 import React from 'react'
-import { Children } from 'react/cjs/react.production.min'
-import Button from '../Button/Button'
 import "./TermPlans.css"
 
 

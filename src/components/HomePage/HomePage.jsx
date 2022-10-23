@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <article className='homePage'>
       <section className='homePage__textContent'>
-        <h3>Secure Trade Firm - We provide you with necessary features that will make your crypto experience better.</h3>
+        <h3>Trust Crypto Investment - We provide you with necessary features that will make your crypto experience better.</h3>
         <p>Invest in an Industry leading, reliable and professional organization. We provide you with the necessary features that will make your experience better. We also guarantee the fastest and the most exciting returns on your investments with high end security layers to make your transactions safer.</p>
         <Link to="/signup">
           <Button title="GET STARTED" />

@@ -59,7 +59,7 @@ const SignUp = () => {
 
   return (
     <div className='Auth'>
-      <div className='Logo'>BANIWAZ</div>
+      <div className='Logo'>Trust Crypto Investment</div>
       <div className='Auth__Wrapper'>
         <h3>Create an Account</h3>
         <p>Sign up with your email and get started with your free account.</p>
@@ -149,7 +149,7 @@ const SignUp = () => {
             </ul>
           </div>
           <div className='Auth__footer-rights'>
-            <p>Secure Trade Firm © 2022. All Rights Reserved.</p>
+            <p>Trust Crypto Investment © 2022. All Rights Reserved.</p>
           </div>
         </div>
       </footer>

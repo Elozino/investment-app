@@ -5,7 +5,7 @@ import TermPlans from '../TermPlans/TermPlans'
 const ShortPlan = () => {
   return (
     <TermPlans title="Short">
-        <div className='container'>
+        <div className='TermsPlan_container'>
           <div className='header'>
             <h4>Standard Plan</h4>
             <p>Entry level of investment & earn money.</p>
@@ -17,7 +17,7 @@ const ShortPlan = () => {
             <Button title="GET STARTED" />
           </div>
         </div>
-        <div className='container'>
+        <div className='TermsPlan_container'>
           <div className='header'>
             <h4>Premium Plan</h4>
             <p>Medium level of investment & earn money.</p>
@@ -29,7 +29,7 @@ const ShortPlan = () => {
             <Button title="GET STARTED" />
           </div>
         </div>
-        <div className='container'>
+        <div className='TermsPlan_container'>
           <div className='header'>
             <h4>Professional Plan</h4>
             <p>Exclusive level of investment & earn money.</p>

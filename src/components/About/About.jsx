@@ -9,7 +9,7 @@ const About = () => {
       <div className='About__header'>
         <div className='About__headerWrapper'>
           <h1>About</h1>
-          <p>Secure Trade Firm?</p>
+          <p>Trust Crypto Investment?</p>
           <hr />
         </div>
         <div className='About__headerWrapper1'>

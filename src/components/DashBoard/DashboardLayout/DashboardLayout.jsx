@@ -110,7 +110,7 @@ const DashboardLayout = () => {
             </ul>
           </div>
           <div className='DashboardLayout__footer-rights'>
-            <p>© BaniWaz {new Date().getFullYear()}. All Rights Reserved.</p>
+            <p>© Trust Crypto Investment {new Date().getFullYear()}. All Rights Reserved.</p>
           </div>
         </div>
       </div>

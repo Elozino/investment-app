@@ -14,7 +14,7 @@ const Solution = () => {
           <img src={Icon1} alt="icon" />
           <h3>Easy Transactions</h3>
           <p>
-            Secure Trade Firm crypto transactions are made easily, at low cost, and in a manner more private than most other transactions. Using a simple smartphone app, hardware wallet, or exchange wallet, anyone can send and receive a variety of cryptocurrencies.
+            Trust Crypto Investment Investmentcrypto transactions are made easily, at low cost, and in a manner more private than most other transactions. Using a simple smartphone app, hardware wallet, or exchange wallet, anyone can send and receive a variety of cryptocurrencies.
           </p>
         </div>
         <div>
@@ -31,7 +31,7 @@ const Solution = () => {
           <img src={Icon4} alt="icon" />
           <h3>Transactional Freedom</h3>
           <p>
-            One of the great benefits of Secure Trade Firm Investments is that it can be used to exchange value between two parties. This can be done independently of any third-party, making the transaction freer and censorship-resistant.
+            One of the great benefits of Trust Crypto Investment InvestmentInvestments is that it can be used to exchange value between two parties. This can be done independently of any third-party, making the transaction freer and censorship-resistant.
           </p>
         </div>
       </div>

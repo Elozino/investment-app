@@ -39,7 +39,7 @@ const NavBar = () => {
   return (
     <nav className='navBar'>
       <div className='navBar__logo'>
-        <Link to="/">BANIWAZ</Link>
+        <Link to="/">Trust Crypto Investment</Link>
       </div>
       <div className='navBar__navLink'
         style={{ display: menu && "none" }}

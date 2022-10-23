@@ -1,14 +1,14 @@
 export const faqs = [
   {
     id: 0,
-    faqs: "WHAT IS Secure Trade Firm AND WHAT KIND OF ACTIVITY IT HAS? ",
+    faqs: "WHAT IS Trust Crypto Investment InvestmentAND WHAT KIND OF ACTIVITY IT HAS? ",
     answer:
-      "Secure Trade Firm; involved in modern technology business, which is closely linked with the development of new cryptomining algorithms, construction of powerful mining farms and trading activity on electronic exchanges.",
+      "Trust Crypto Investment; involved in modern technology business, which is closely linked with the development of new cryptomining algorithms, construction of powerful mining farms and trading activity on electronic exchanges.",
   },
   {
     id: 1,
     faqs: "WHERE DOES THE COMPANY INVEST RAISED FUNDS?",
-    answer: "Secure Trade Firm Company is funding the construction of new powerful mining farms and also engaged in application development of new Cryptomining algorithms.",
+    answer: "Trust Crypto Investment InvestmentCompany is funding the construction of new powerful mining farms and also engaged in application development of new Cryptomining algorithms.",
   },
   {
     id: 2,

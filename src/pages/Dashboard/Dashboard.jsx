@@ -54,13 +54,14 @@ const Dashboard = () => {
         <FundsCard
           title="Available Balance"
           duration="INVESTMENT ACCOUNT"
-          usdAmount={usd}
+          usdAmount={usd * 1.2}
           bg="#037DFF"
         />
         <FundsCard
           title="Total Deposit"
           duration="THIS MONTH"
           bg="#364A63"
+          usdAmount={usd}
         />
         <FundsCard
           title="Total Withdrawal"

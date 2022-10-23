@@ -16,7 +16,7 @@ function ForgotPassword() {
   };
   return (
     <div className='Auth'>
-      <div className='Auth__Logo'>BANIWAZ</div>
+      <div className='Auth__Logo'>Trust Crypto Investment</div>
       <div
         className='Auth__Wrapper'
       >
@@ -61,7 +61,7 @@ function ForgotPassword() {
             </ul>
           </div>
           <div className='Auth__footer-rights'>
-            <p>Secure Trade Firm © 2022. All Rights Reserved.</p>
+            <p>Trust Crypto Investment © 2022. All Rights Reserved.</p>
           </div>
         </div>
       </footer>

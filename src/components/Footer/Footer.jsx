@@ -130,7 +130,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div>© {new Date().getFullYear()}BaniWaz</div>
+        <div>Trust Crypto Investment © {new Date().getFullYear()}. All Rights Reserved.</div>
       </section>
       <a href="http://" target="_blank" rel="noopener noreferrer"></a>
     </>
