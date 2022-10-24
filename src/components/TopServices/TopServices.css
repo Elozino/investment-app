@@ -76,9 +76,16 @@
     padding: 30px;
   }
 
-
   .TopServices__service {
     flex-direction: column;
     margin-top: 20px;
+  }
+
+  .TopServices__service > div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .TopServices__service > div p {
+    text-align: justify;
   }
 }
